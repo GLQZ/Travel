@@ -7,8 +7,12 @@
       <span class="iconfont icon-search">&#xe600;</span>
       城市/景点/主题
     </div>
-    <div class="header-right">{{this.city}}<span class="iconfont icon-arrow">&#xe662;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont icon-arrow">&#xe662;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -25,10 +29,10 @@ export default {
   @import "~styles/varibles.styl"
   .header
     display flex
-    height .86rem
+    height $headerHeight
     background $bgColor
     color #fff
-    line-height .86rem
+    line-height $headerHeight
     .header-left
       width .64rem
       float left
@@ -46,9 +50,11 @@ export default {
       padding-left .2rem
       color #ccc
     .header-right
+      color #fff
       width 1.24rem
       float right
       text-align center
       .icon-arrow
+        margin-left -.1rem
         font-size .3rem
 </style>

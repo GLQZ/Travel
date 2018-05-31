@@ -9,7 +9,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import HomeHeader from './components/header.vue'
+import HomeHeader from './components/Header.vue'
 import HomeSwiper from './components/Swiper.vue'
 import HomeIcons from './components/Icons.vue'
 import HomeRecommend from './components/Recommend.vue'
