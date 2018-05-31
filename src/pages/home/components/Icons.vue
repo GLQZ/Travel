@@ -17,59 +17,21 @@
 <script type="text/ecmascript-6">
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: false
-      },
-      iconsList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-        desc: '动植物园'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/87/20656da0ac042002.png',
-        desc: '玻璃栈道'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-        desc: '游乐园'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-        desc: '踏青赏花'
-      }, {
-        id: '0006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '亲子游'
-      }, {
-        id: '0007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/c1/6f15f887179fa002.png',
-        desc: '庙寺'
-      }, {
-        id: '0008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-        desc: '水世界乐园'
-      }, {
-        id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-        desc: '自由风光'
-      }, {
-        id: '0010',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
-        desc: '全部玩乐'
-      }]
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconsList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="Loading">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script type="text/ecmascript-6">
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/6c/6ce376cd5775ce6fb4.img.jpg_200x200_7ed7ce79.jpg',
-        title: '棕榈谷水城',
-        desc: '反正我没去过那就说明一般哈哈哈'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/6c/6ce376cd5775ce6fb4.img.jpg_200x200_7ed7ce79.jpg',
-        title: '棕榈谷水城',
-        desc: '反正我没去过那就说明一般哈哈哈'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/6c/6ce376cd5775ce6fb4.img.jpg_200x200_7ed7ce79.jpg',
-        title: '棕榈谷水城',
-        desc: '反正我没去过那就说明一般哈哈哈'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1607/6c/6ce376cd5775ce6fb4.img.jpg_200x200_7ed7ce79.jpg',
-        title: '棕榈谷水城',
-        desc: '反正我没去过那就说明一般哈哈哈'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -7,16 +7,17 @@
       <span class="iconfont icon-search">&#xe600;</span>
       城市/景点/主题
     </div>
-    <div class="header-right">
-      城市
-      <span class="iconfont icon-arrow">&#xe662;</span>
+    <div class="header-right">{{this.city}}<span class="iconfont icon-arrow">&#xe662;</span>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -50,5 +51,4 @@ export default {
       text-align center
       .icon-arrow
         font-size .3rem
-        margin-left -.1rem
 </style>
