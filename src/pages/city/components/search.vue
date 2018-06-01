@@ -23,6 +23,6 @@ export default {
       line-height .62rem
       width 100%
       text-align center
-      border-radius .1rem
+      border-radius .06rem
       color #666
 </style>
