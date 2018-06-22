@@ -47,6 +47,7 @@ export default {
         this.sightName = data.sightName
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
       }
     }
   },
