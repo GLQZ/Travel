@@ -29,7 +29,8 @@ export default {
       sightName: '',
       bannerImg: '',
       gallaryImgs: [],
-      list: []
+      list: [],
+      lastID: ''
     }
   },
   methods: {
@@ -53,11 +54,17 @@ export default {
   },
   mounted () {
     this.getDetailInfo()
+  },
+  activated () {
+    if (this.lastID !== this.$route.params.id) {
+      this.lastID = this.$route.params.id
+      this.getDetailInfo()
+    }
   }
 }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   .content
-    height 50rem
+    height 20rem
 </style>

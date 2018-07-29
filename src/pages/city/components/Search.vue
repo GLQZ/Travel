@@ -75,6 +75,9 @@ export default {
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.search)
+  },
+  activated () {
+    this.keyword = ''
   }
 }
 </script>

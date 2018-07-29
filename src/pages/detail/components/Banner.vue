@@ -38,6 +38,10 @@ export default {
     bannerImg: String,
     gallaryImgs: Array
   },
+  components: {
+    CommonGallery,
+    FadeAnimation
+  },
   methods: {
     handleBannerClick () {
       this.showGallery = true
@@ -45,10 +49,6 @@ export default {
     handleGalleryClose () {
       this.showGallery = false
     }
-  },
-  components: {
-    CommonGallery,
-    FadeAnimation
   }
 }
 </script>
